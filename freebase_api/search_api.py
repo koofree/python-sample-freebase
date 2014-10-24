@@ -11,10 +11,10 @@ params = {
     'key': api_key,
     'filter': '(all child:"Frank Zappa")'
 }
-# params = {
-#     'key': api_key,
-#     'query': query
-# }
+params = {
+    'key': api_key,
+    'query': query
+}
 url = service_url + '?' + urllib.urlencode(params)
 response = json.loads(urllib.urlopen(url).read())
 for result in response['result']:
